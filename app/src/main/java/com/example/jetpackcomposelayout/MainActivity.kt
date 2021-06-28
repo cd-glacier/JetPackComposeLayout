@@ -28,6 +28,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
+import androidx.constraintlayout.compose.atLeast
 import com.example.jetpackcomposelayout.ui.theme.LayoutsCodelabTheme
 import com.google.accompanist.coil.rememberCoilPainter
 import kotlinx.coroutines.launch
@@ -58,6 +60,7 @@ fun LargeConstraintLayout() {
             "This is a very very very very very very very long text",
             Modifier.constrainAs(text) {
                 linkTo(start = guideline, end = parent.end)
+                width = Dimension.preferredWrapContent.atLeast(100.dp)
             }
         )
     }
