@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TwoTexts(modifier: Modifier = Modifier, text1: String, text2: String) {
-    Row(modifier = modifier) {
+    Row(modifier = modifier.height(IntrinsicSize.Min)) {
         Text(
             modifier = Modifier
                 .weight(1f)
